@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e)=> {
     messageOne.textContent = 'loarding...'
     messageTwo.textContent = ''
 
-    fetch('http://localhost:5000/weather?address='+ location)
+    fetch('http://kunj-weather-app.onrender.com/weather?address='+ location)
         .then( (res) => {
             res.json().then( (data) => {
                 if(data.error)
