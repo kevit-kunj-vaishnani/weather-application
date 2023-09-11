@@ -28,5 +28,7 @@ weatherForm.addEventListener('submit', (e)=> {
                     messageTwo.textContent = data.forecast;
                 }
         })
+
+        .catch((error) => console.log("net not connected"))
     })
 })
