@@ -32,5 +32,6 @@ weatherForm.addEventListener('submit', (e)=> {
             }
         })
 
-        .catch((error) => messageOne.textContent = "net not connected")
+        .catch(() => messageOne.textContent = "net not connected")
     })
+    
