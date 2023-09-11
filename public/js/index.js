@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e)=> {
     messageOne.textContent = 'loarding...'
     messageTwo.textContent = ''
 
-    fetch('/weather?address='+ location)
+    fetch('http://kunj-weather-app.onrender.com/weather?address='+ location)
         .then( (res) => {
             res.json().then( (data) => {
                 if(data.error)
@@ -29,6 +29,6 @@ weatherForm.addEventListener('submit', (e)=> {
                 }
         })
 
-        .catch((error) => console.log("net not connected"))
+        .catch((error) => messageTwo.textContent = "net not connected")
     })
 })
