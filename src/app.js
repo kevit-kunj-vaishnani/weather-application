@@ -24,15 +24,15 @@ app.set("views",views_path)                 // for views
 hbs.registerPartials(partials_path)         // for partials
 
 app.get('' , (requst,response)  =>  {
-    response.render('index',{title:'Weather' , name:'manavi'})
+    response.render('index',{title:'Weather' , name:'Kunj'})
 })
 
 app.get("/about", (req,res) => {
-    res.render("about" , { title: 'About' , name:'manoj'})
+    res.render("about" , { title: 'About' , name:'Patel'})
 })
 
 app.get("/help", (req,res) => {
-    res.render("help" , { title: 'Help' , name:'fonther'})
+    res.render("help" , { title: 'Help' , name:'Dharmik'})
 })
 
 app.get("/weather", (req,res) => {
