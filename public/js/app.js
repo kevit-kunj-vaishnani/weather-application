@@ -1,5 +1,4 @@
 
-console.log("file is load");
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input');
