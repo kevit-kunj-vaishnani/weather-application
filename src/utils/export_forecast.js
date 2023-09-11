@@ -14,7 +14,8 @@ async function forecast(latitude, longitude) {
         else
         {
             return {
-                data:`${response.data.location.name} has temperature = ${response.data.current.temperature} celcius`,
+                temperatureData:`${response.data.location.name} has temperature = ${response.data.current.temperature} celcius`,
+                //windData:`${response.data.location.name} has wind speed = ${response.data.weather_description.wind_speed}`,
                 perfect_location:`${response.data.location.name},${response.data.location.country}`
             };
         }

@@ -56,7 +56,8 @@ app.get("/weather", (req,res) => {
             //console.log(geolocation_response);
         
             res.send({ 
-                forecast: forecast_response.data,                       // console.log(forecast_response.data); = Ahmedabad has temperature = 37 celcius
+                temp_forecast: forecast_response.temperatureData,                       // console.log(forecast_response.data); = Ahmedabad has temperature = 37 celcius
+                // wind_forecast: forecast_response.windData,
                 location: forecast_response.perfect_location,           // console.log(req.query.address);      = ahmedabad
                 address: req.query.address                              // console.log(forecast_response.perfect_location); = Ahmedabad,India
             })
