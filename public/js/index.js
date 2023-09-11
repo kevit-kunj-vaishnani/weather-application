@@ -16,19 +16,21 @@ weatherForm.addEventListener('submit', (e)=> {
 
     fetch('/weather?address='+ location)
         .then( (res) => {
-            res.json().then( (data) => {
-                if(data.error)
-                {
-                   messageOne.textContent = data.error;
-                }
+            return res.json()
+        })
 
-                else
-                {
-                    messageOne.textContent = data.location;
-                    messageTwo.textContent = data.forecast;
-                }
+        .then((data) => {
+            if(data.error)
+            {
+                messageOne.textContent = data.error;
+            }
+
+            else
+            {
+                messageOne.textContent = data.location;
+                messageTwo.textContent = data.forecast;
+            }
         })
 
         .catch((error) => messageTwo.textContent = "net not connected")
     })
-})
