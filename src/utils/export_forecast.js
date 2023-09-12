@@ -13,9 +13,10 @@ async function forecast(latitude, longitude) {
 
         else
         {
+            console.log(response.data.current. weather_descriptions)
             return {
                 temperatureData:`${response.data.location.name} has temperature = ${response.data.current.temperature} celcius`,
-                //windData:`${response.data.location.name} has wind speed = ${response.data.weather_description.wind_speed}`,
+                windData:`${response.data.location.name} has pressure = ${response.data.current.pressure}`,
                 perfect_location:`${response.data.location.name},${response.data.location.country}`
             };
         }
